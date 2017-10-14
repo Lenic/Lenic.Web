@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E7FCE28-7D84-4089-BA8A-6C3021722B73}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intime.Web.WebApi.Expressions</RootNamespace>
+    <AssemblyName>Intime.Web.WebApi.Expressions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\NuGet\Expressions.NuGet\lib\net40\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\NuGet\Expressions.NuGet\lib\net40\Intime.Web.WebApi.Expressions.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\DefaultObjectResolver.cs" />
+    <Compile Include="Core\ExpressionProcessor.cs" />
+    <Compile Include="Core\ExpressionWriter.cs" />
+    <Compile Include="Core\RestQueryable.cs" />
+    <Compile Include="Core\RestQueryProvider.cs" />
+    <Compile Include="Core\Writers\AnyAllMethodWriter.cs" />
+    <Compile Include="Core\Writers\BooleanValueWriter.cs" />
+    <Compile Include="Core\Writers\ByteArrayValueWriter.cs" />
+    <Compile Include="Core\Writers\ByteValueWriter.cs" />
+    <Compile Include="Core\Writers\DateTimeOffsetValueWriter.cs" />
+    <Compile Include="Core\Writers\DateTimeValueWriter.cs" />
+    <Compile Include="Core\Writers\DecimalValueWriter.cs" />
+    <Compile Include="Core\Writers\DefaultMethodWriter.cs" />
+    <Compile Include="Core\Writers\DoubleValueWriter.cs" />
+    <Compile Include="Core\Writers\EmptyAnyMethodWriter.cs" />
+    <Compile Include="Core\Writers\EnumValueWriter.cs" />
+    <Compile Include="Core\Writers\EqualsMethodWriter.cs" />
+    <Compile Include="Core\Writers\GuidValueWriter.cs" />
+    <Compile Include="Core\Writers\IMethodCallWriter.cs" />
+    <Compile Include="Core\Writers\IntegerValueWriter.cs" />
+    <Compile Include="Core\Writers\IntValueWriter.cs" />
+    <Compile Include="Core\Writers\IValueWriter.cs" />
+    <Compile Include="Core\Writers\LongValueWriter.cs" />
+    <Compile Include="Core\Writers\MathCeilingMethodWriter.cs" />
+    <Compile Include="Core\Writers\MathFloorMethodWriter.cs" />
+    <Compile Include="Core\Writers\MathMethodWriter.cs" />
+    <Compile Include="Core\Writers\MathRoundMethodWriter.cs" />
+    <Compile Include="Core\Writers\ParameterValueWriter.cs" />
+    <Compile Include="Core\Writers\RationalValueWriter.cs" />
+    <Compile Include="Core\Writers\ShortValueWriter.cs" />
+    <Compile Include="Core\Writers\SingleValueWriter.cs" />
+    <Compile Include="Core\Writers\StreamValueWriter.cs" />
+    <Compile Include="Core\Writers\StringContainsMethodWriter.cs" />
+    <Compile Include="Core\Writers\StringEndsWithMethodWriter.cs" />
+    <Compile Include="Core\Writers\StringIndexOfMethodWriter.cs" />
+    <Compile Include="Core\Writers\StringReplaceMethodWriter.cs" />
+    <Compile Include="Core\Writers\StringStartsWithMethodWriter.cs" />
+    <Compile Include="Core\Writers\StringSubstringMethodWriter.cs" />
+    <Compile Include="Core\Writers\StringToLowerMethodWriter.cs" />
+    <Compile Include="Core\Writers\StringToUpperMethodWriter.cs" />
+    <Compile Include="Core\Writers\StringTrimMethodWriter.cs" />
+    <Compile Include="Core\Writers\StringValueWriter.cs" />
+    <Compile Include="Core\Writers\TimeSpanValueWriter.cs" />
+    <Compile Include="Core\Writers\UnsignedIntValueWriter.cs" />
+    <Compile Include="Core\Writers\UnsignedLongValueWriter.cs" />
+    <Compile Include="Core\Writers\UnsignedShortValueWriter.cs" />
+    <Compile Include="Core\Writers\ValueWriterBase.cs" />
+    <Compile Include="IExpressionProcessor.cs" />
+    <Compile Include="IExpressionWriter.cs" />
+    <Compile Include="IObjectResolver.cs" />
+    <Compile Include="IQueryProvider.cs" />
+    <Compile Include="IRemoteDataFetcher.cs" />
+    <Compile Include="RemoteDataParameter.cs" />
+    <Compile Include="RemoteObjectContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
